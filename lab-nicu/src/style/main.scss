@@ -1,0 +1,8 @@
+@import './_reset.scss';
+
+$mainColor: #4b6cb7;
+body{
+  background: $mainColor;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
