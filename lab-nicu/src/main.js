@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {Route, BrowserRouter} from 'react-router-dom';
 
-import NoteCreateForm from './component/note-create-form';
+import DashboardContainer from './component/dashboard-container';
 
 class App extends React.Component {
   constructor(props){
@@ -14,6 +14,10 @@ class App extends React.Component {
     };
   }
   
+  componentDidUpdate(){
+    console.log('...STATE....', this.state);
+  }
+
   getApp(){
     return {
       state: this.state,
@@ -25,7 +29,7 @@ class App extends React.Component {
       <main>
         <BrowserRouter>
           <div>
-            <Route exact path='/' component={NoteCreateForm}/>
+            <Route exact path='/' component={() => <DashboardContainer app={this.getApp()}/>}/>
           </div>
         </BrowserRouter>
       </main>
