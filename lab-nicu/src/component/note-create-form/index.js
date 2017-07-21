@@ -7,6 +7,8 @@ class NoteCreateForm extends React.Component{
     super(props);
     this.state = {
       content: '',
+      isCompleted: false,
+      editing: false,
     };
 
     this.handleCreateFormChange = this.handleCreateFormChange.bind(this);
@@ -21,12 +23,13 @@ class NoteCreateForm extends React.Component{
   
   handleFormSubmit(e){
     e.preventDefault();
-    this.props.handleSubmit(this.state.content);
+    this.props.handleNoteCreate(this.state);
+     
   }
 
   render(){
     return(
-      <form onSubmit={this.handleFormSubmit}>
+      <form className='note-form'onSubmit={this.handleFormSubmit}>
         <label> TODO:</label>
         <input
           type = 'text'
