@@ -30,7 +30,6 @@ class NoteCreateForm extends React.Component{
   render(){
     return(
       <form className='note-form'onSubmit={this.handleFormSubmit}>
-        <label> TODO:</label>
         <input
           type = 'text'
           value = {this.state.content}

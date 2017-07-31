@@ -19,10 +19,18 @@ body{
 
   li{
     font-size: 1.2em;
+    box-sizing: border-box;
     width: 100%;
+    margin: 0 auto;
     margin-top: 1.5%;
-    padding: .2em;
+    padding: .4em;
     border-radius: 7.5px;
-    background: grey;
+    background: rgba(102, 102, 102, .6)
+  }
+  
+  h1{
+    font-size: 3em;
+    font-weight: 600;
+    
   }
 }
